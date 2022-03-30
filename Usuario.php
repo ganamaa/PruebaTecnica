@@ -31,7 +31,7 @@
 
 <body>
     
-    <h3>USUARIOS ACTIVOS</h3>
+    <h2>USUARIOS ACTIVOS</h2>
     <table class="table" >
         <thead class="table-success table-striped" >
             <tr>
@@ -56,7 +56,7 @@
         </tbody>
     </table>
 
-    <h3>USUARIOS INACTIVOS</h3>
+    <h2>USUARIOS INACTIVOS</h2>
     <table class="table" >
         <thead class="table-success table-striped" >
             <tr>
@@ -81,7 +81,7 @@
         </tbody>
     </table>
 
-    <h3>USUARIOS ESPERA</h3>
+    <h2>USUARIOS EN ESPERA</h2>
     <table class="table" >
         <thead class="table-success table-striped" >
             <tr>
