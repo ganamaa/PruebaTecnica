@@ -2,13 +2,13 @@
     include("Conexion.php");
     $con=conectar();
 
-    $sql1="SELECT `Email`, `Nombre`, `Apellido` FROM `usuarios` WHERE Codigo = 1" ;
+    $sql1="SELECT u.Email, u.Nombre, u.Apellido , r.apellido FROM usuarios u INNER JOIN revisores r ON u.Revisor = r.id WHERE Codigo = 1 ORDER BY r.apellido" ;
     $query1=mysqli_query($con,$sql1);
 
-    $sql2="SELECT `Email`, `Nombre`, `Apellido` FROM `usuarios` WHERE  Codigo = 2" ;
+    $sql2="SELECT u.Email, u.Nombre, u.Apellido , r.apellido FROM usuarios u INNER JOIN revisores r ON u.Revisor = r.id WHERE Codigo = 1 ORDER BY r.apellido" ;
     $query2=mysqli_query($con,$sql2);
     
-    $sql3="SELECT `Email`, `Nombre`, `Apellido` FROM `usuarios` WHERE  Codigo = 3" ;
+    $sql3="SELECT u.Email, u.Nombre, u.Apellido , r.apellido FROM usuarios u INNER JOIN revisores r ON u.Revisor = r.id WHERE Codigo = 1 ORDER BY r.apellido" ;
     $query3=mysqli_query($con,$sql3);
 
 ?>
@@ -38,6 +38,7 @@
                 <th style="text-align: center">Email</th>
                 <th style="text-align: center">Nombre</th>
                 <th style="text-align: center">Apellido</th>
+                <th style="text-align: center">Revisor</th>
                 </tr>
             </thead>
 
@@ -48,7 +49,8 @@
             <tr>
                 <th><?php  echo $row['Email']?></th>
                 <th><?php  echo $row['Nombre']?></th>
-                <th><?php  echo $row['Apellido']?></th>                                       
+                <th><?php  echo $row['Apellido']?></th>
+                <th><?php  echo $row['apellido']?></th>                                       
                 </tr>
             <?php 
             }
@@ -63,6 +65,7 @@
                 <th style="text-align: center">Email</th>
                 <th style="text-align: center">Nombre</th>
                 <th style="text-align: center">Apellido</th>
+                <th style="text-align: center">Revisor</th>
                 </tr>
             </thead>
 
@@ -73,7 +76,8 @@
             <tr>
                 <th><?php  echo $row['Email']?></th>
                 <th><?php  echo $row['Nombre']?></th>
-                <th><?php  echo $row['Apellido']?></th>                                       
+                <th><?php  echo $row['Apellido']?></th> 
+                <th><?php  echo $row['apellido']?></th>                                       
                 </tr>
             <?php 
             }
@@ -88,6 +92,7 @@
                 <th style="text-align: center">Email</th>
                 <th style="text-align: center">Nombre</th>
                 <th style="text-align: center">Apellido</th>
+                <th style="text-align: center">Revisor</th>
                 </tr>
             </thead>
 
@@ -98,7 +103,8 @@
             <tr>
                 <th><?php  echo $row['Email']?></th>
                 <th><?php  echo $row['Nombre']?></th>
-                <th><?php  echo $row['Apellido']?></th>                                       
+                <th><?php  echo $row['Apellido']?></th>  
+                <th><?php  echo $row['apellido']?></th>                                      
                 </tr>
             <?php 
             }
