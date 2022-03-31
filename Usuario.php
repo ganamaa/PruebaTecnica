@@ -5,10 +5,10 @@
     $sql1="SELECT u.Email, u.Nombre, u.Apellido , r.apellido FROM usuarios u INNER JOIN revisores r ON u.Revisor = r.id WHERE Codigo = 1 ORDER BY r.apellido" ;
     $query1=mysqli_query($con,$sql1);
 
-    $sql2="SELECT u.Email, u.Nombre, u.Apellido , r.apellido FROM usuarios u INNER JOIN revisores r ON u.Revisor = r.id WHERE Codigo = 1 ORDER BY r.apellido" ;
+    $sql2="SELECT u.Email, u.Nombre, u.Apellido , r.apellido FROM usuarios u INNER JOIN revisores r ON u.Revisor = r.id WHERE Codigo = 2 ORDER BY r.apellido" ;
     $query2=mysqli_query($con,$sql2);
     
-    $sql3="SELECT u.Email, u.Nombre, u.Apellido , r.apellido FROM usuarios u INNER JOIN revisores r ON u.Revisor = r.id WHERE Codigo = 1 ORDER BY r.apellido" ;
+    $sql3="SELECT u.Email, u.Nombre, u.Apellido , r.apellido FROM usuarios u INNER JOIN revisores r ON u.Revisor = r.id WHERE Codigo = 3 ORDER BY r.apellido" ;
     $query3=mysqli_query($con,$sql3);
 
 ?>
